@@ -1,0 +1,29 @@
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.detail {
+    width: 90%;
+}
+
+
+.detail img {
+    height: 229px;
+    border-radius: 7px;
+}
+
+.head {
+    font-weight: 800;
+}
+
+.title {
+    font-weight: 900;
+    color: #2c974b;
+}
+
+@media only screen and (min-width:576px) {
+    .detail {
+        width: 50%;
+    }
+}

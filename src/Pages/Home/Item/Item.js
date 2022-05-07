@@ -3,10 +3,10 @@ import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Item.css'
 const Item = ({ item }) => {
-    const { id, img, name, description } = item
+    const { _id, img, name, description, price, quantity, supplier } = item
     const navigate = useNavigate()
-    const navigateToServiceDetail = id => {
-        navigate(`/inventory/${id}`)
+    const navigateToInventoryDetail = id => {
+        navigate(`/item/${id}`)
     }
     return (
         <div className='card'>
@@ -17,11 +17,15 @@ const Item = ({ item }) => {
                     <h3 className='text-center'>{name}</h3>
                 </div>
                 <div className="content">
+                    <p><span className='head'>Price:</span> {price}</p>
+                    <p><span className='head'>Quantity:</span> {quantity}</p>
+                    <p><span className='head'>Supplier:</span> {supplier}</p>
+                    <p><span className='head'>About This Item:</span></p>
                     <p>
                         {description}
                     </p>
                 </div>
-                <Button onClick={() => navigateToServiceDetail(id)} className="update-btn">Update</Button>
+                <Button onClick={() => navigateToInventoryDetail(_id)} className="update-btn">Update</Button>
             </div>
         </div>
     );
