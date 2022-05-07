@@ -1,0 +1,65 @@
+[
+    {
+        "id": "624abe65b392ffd06ce41bb5",
+        "img": "./services/tax.jpg",
+        "name": "Smart TV",
+        "price": 1000,
+        "description": "Take the guesswork out of your taxes. Planning throughout the year means you know where you're headed, and have made the most of potential tax savings."
+    },
+    {
+        "id": "624abe6521f88af1d4a97969",
+        "img": "./services/accounting.jpg",
+        "name": "Wearables",
+        "price": 1200,
+        "description": "Ensure you have a accurate, and bulletproof set of financials for your business. We’ll make sure everyone is paid and take care of your complex payroll filings across all states."
+    },
+    {
+        "id": "624abe6590115ddeee6161f6",
+        "img": "./services/advisory.jpg",
+        "name": "Smart Phone",
+        "price": 900,
+        "description": "Need to know how to incorporate? What your obligations are? Exercising stock options? Let us help you remove the guess work."
+    },
+    {
+        "id": "624abe6590115ddeee6161f6",
+        "img": "./services/advisory.jpg",
+        "name": "DSLR Camera",
+        "price": 900,
+        "description": "Need to know how to incorporate? What your obligations are? Exercising stock options? Let us help you remove the guess work."
+    },
+    {
+        "id": "624abe6590115ddeee6161f6",
+        "img": "./services/advisory.jpg",
+        "name": "Laptop",
+        "price": 900,
+        "description": "Need to know how to incorporate? What your obligations are? Exercising stock options? Let us help you remove the guess work."
+    },
+    {
+        "id": "624abe6590115ddeee6161f6",
+        "img": "./services/advisory.jpg",
+        "name": "Computer",
+        "price": 900,
+        "description": "Need to know how to incorporate? What your obligations are? Exercising stock options? Let us help you remove the guess work."
+    },
+    {
+        "id": "624abe6590115ddeee6161f6",
+        "img": "./services/advisory.jpg",
+        "name": "Fridge",
+        "price": 900,
+        "description": "Need to know how to incorporate? What your obligations are? Exercising stock options? Let us help you remove the guess work."
+    },
+    {
+        "id": "624abe6590115ddeee6161f6",
+        "img": "./services/advisory.jpg",
+        "name": "Home Audio",
+        "price": 900,
+        "description": "Need to know how to incorporate? What your obligations are? Exercising stock options? Let us help you remove the guess work."
+    },
+    {
+        "id": "624abe6590115ddeee6161f6",
+        "img": "./services/advisory.jpg",
+        "name": "Microwave",
+        "price": 900,
+        "description": "Need to know how to incorporate? What your obligations are? Exercising stock options? Let us help you remove the guess work."
+    }
+]

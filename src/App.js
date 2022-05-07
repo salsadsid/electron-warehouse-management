@@ -1,5 +1,8 @@
 
 import './App.css';
+import Home from './Pages/Home/Home/Home';
+import Item from './Pages/Home/Item/Item';
+import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
 function App() {
@@ -7,8 +10,8 @@ function App() {
     <div>
       <Header></Header>
 
-      <h1 className='text-center'>hello</h1>
-
+      <Home></Home>
+      <Footer></Footer>
     </div>
   );
 }
