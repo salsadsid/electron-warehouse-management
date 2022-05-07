@@ -1,13 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
-
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 const Register = () => {
-    const handleSubmit = event => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    if (user) {
+        console.log(user)
+    }
+    const handleSubmit = async event => {
         event.preventDefault()
         const email = event.target.email.value;
         const password = event.target.password.value;
         console.log(email, password);
+        await createUserWithEmailAndPassword(email, password);
         event.target.reset();
     }
     return (

@@ -1,8 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Item.css'
 const Item = ({ item }) => {
-    const { img, name, description } = item
+    const { id, img, name, description } = item
+    const navigate = useNavigate()
+    const navigateToServiceDetail = id => {
+        navigate(`/inventory/${id}`)
+    }
     return (
         <div className='card'>
             <img src={img} className="card-img-top" alt="..." />
@@ -16,7 +21,7 @@ const Item = ({ item }) => {
                         {description}
                     </p>
                 </div>
-                <Link to='/checkout' className="update-btn">Check out</Link>
+                <Button onClick={() => navigateToServiceDetail(id)} className="update-btn">Update</Button>
             </div>
         </div>
     );
