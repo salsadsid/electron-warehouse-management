@@ -1,0 +1,24 @@
+.logo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.logo-container img {
+    height: 100px;
+    opacity: .5;
+    transition: all .4s ease-in-out;
+}
+
+.logo-container img:hover {
+    height: 100px;
+    opacity: 1;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width:576px) {
+    .logo-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

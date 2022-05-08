@@ -1,14 +1,17 @@
 import React from 'react';
+import AllNews from '../AllNews/AllNews';
 import Banner from '../Banner/Banner';
+import Companies from '../Companies/Companies';
 import Items from '../Items/Items';
-import Reviews from '../Reviews/Reviews';
+
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             <Items></Items>
-            <Reviews></Reviews>
+            <AllNews></AllNews>
+            <Companies></Companies>
         </div>
     );
 };

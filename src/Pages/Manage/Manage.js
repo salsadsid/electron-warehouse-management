@@ -28,7 +28,7 @@ const Manage = () => {
             <h1 className="text-center my-3">Manage Inventories</h1>
             <div>
                 {
-                    items.map(item => <div key={item._id}>
+                    items.map(item => <div className='table-item' key={item._id}>
                         <p><span>Name: {item.name} | Supplier: {item.supplier} <button className='btn btn-danger' onClick={() => { handleDelete(item._id) }}>Delete This Item</button></span></p>
                     </div>)
                 }

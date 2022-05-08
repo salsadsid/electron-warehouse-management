@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-
+import './MyItem.css'
 const MyItem = () => {
     const [user] = useAuthState(auth)
     const [myitem, setMyItem] = useState([])
@@ -43,7 +43,7 @@ const MyItem = () => {
             <div>
                 <div>
                     {
-                        myitem.map(item => <div key={item._id}>
+                        myitem.map(item => <div className='table-item' key={item._id}>
                             <p><span>Name: {item.name} | Supplier: {item.supplier} <button className='btn btn-danger' onClick={() => { handleDelete(item._id) }}>Delete This Item</button></span></p>
                         </div>)
                     }
