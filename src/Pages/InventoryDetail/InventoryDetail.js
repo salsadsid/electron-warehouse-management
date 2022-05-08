@@ -8,7 +8,7 @@ const InventoryDetail = () => {
     const [quantity, setQuantity] = useState(0);
 
     useEffect(() => {
-        const url = `http://localhost:5000/item/${id}`
+        const url = `https://protected-river-63833.herokuapp.com/item/${id}`
         console.log(url);
         fetch(url)
             .then(res => res.json())
@@ -20,7 +20,7 @@ const InventoryDetail = () => {
             quantity: item.quantity - 1,
         }
 
-        fetch(`http://localhost:5000/item/`, {
+        fetch(`https://protected-river-63833.herokuapp.com/item/`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +43,7 @@ const InventoryDetail = () => {
             quantity: newQuantity,
         }
 
-        fetch(`http://localhost:5000/item/`, {
+        fetch(`https://protected-river-63833.herokuapp.com/item/`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

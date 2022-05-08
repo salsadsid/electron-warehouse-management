@@ -5,7 +5,7 @@ const AllNews = () => {
     const [news, setNews] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/news')
+        fetch('https://protected-river-63833.herokuapp.com/news')
             .then(res => res.json())
             .then(data => setNews(data))
     }, [])

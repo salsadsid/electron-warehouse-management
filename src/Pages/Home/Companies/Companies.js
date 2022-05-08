@@ -4,7 +4,7 @@ const Companies = () => {
     const [logos, setLogos] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/logo')
+        fetch('https://protected-river-63833.herokuapp.com/logo')
             .then(res => res.json())
             .then(data => setLogos(data))
     }, [])

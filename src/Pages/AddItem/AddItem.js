@@ -9,7 +9,7 @@ const AddItem = () => {
     const onSubmit = data => {
         // console.log(data);
 
-        fetch('http://localhost:5000/item', {
+        fetch('https://protected-river-63833.herokuapp.com/item', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

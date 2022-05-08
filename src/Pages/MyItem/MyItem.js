@@ -9,7 +9,7 @@ const MyItem = () => {
     useEffect(() => {
         const getItem = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/myitem?email=${email}`;
+            const url = `https://protected-river-63833.herokuapp.com/myitem?email=${email}`;
             console.log(url)
             const { data } = await axios.get(url, {
                 headers: {
@@ -23,7 +23,7 @@ const MyItem = () => {
     }, [user])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/item/${id}`;
+        const url = `https://protected-river-63833.herokuapp.com/item/${id}`;
 
         fetch(url, {
             method: 'DELETE'
