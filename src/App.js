@@ -12,10 +12,11 @@ import MyItem from './Pages/MyItem/MyItem';
 
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
-
+import NotFound from './Pages/Shared/NotFound/NotFound';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
-    <div className='App'>
+    <div>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -43,6 +44,7 @@ function App() {
             <MyItem></MyItem>
           </RequireAuth>
         }></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
