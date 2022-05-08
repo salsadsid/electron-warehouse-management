@@ -114,7 +114,7 @@ async function run() {
     }
 }
 run().catch(console.dir)
-app.post('/', async (req, res) => {
+app.get('/', async (req, res) => {
     res.send('Electron')
 })
 app.listen(port, () => {
