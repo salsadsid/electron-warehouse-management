@@ -36,9 +36,24 @@ async function run() {
     try {
         await client.connect()
         const inventoryCollection = client.db('inventory').collection('item');
+        const newsCollection = client.db('inventory').collection('news');
+        const logoCollection = client.db('inventory').collection('logo');
+
         app.get('/item', async (req, res) => {
             const query = {};
             const cursor = inventoryCollection.find(query);
+            const result = await cursor.toArray();
+            res.send(result);
+        })
+        app.get('/news', async (req, res) => {
+            const query = {};
+            const cursor = newsCollection.find(query);
+            const result = await cursor.toArray();
+            res.send(result);
+        })
+        app.get('/logo', async (req, res) => {
+            const query = {};
+            const cursor = logoCollection.find(query);
             const result = await cursor.toArray();
             res.send(result);
         })
