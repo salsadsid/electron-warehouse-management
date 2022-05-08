@@ -25,7 +25,7 @@ const Register = () => {
         <div className="login">
             <div className="form">
                 <form className="login-form" onSubmit={handleSubmit}>
-                    <span className="material-icons">Login</span>
+                    <span className="material-icons">Register</span>
                     <input name='name' type="text" placeholder="name" required />
                     <input name='email' type="email" placeholder="email" required />
                     <input name='password' type="password" placeholder="password" required />

@@ -2,8 +2,16 @@
     width: 50%;
 }
 
+.update-btn.submit {
+    width: 25%;
+}
+
 @media only screen and (max-width:576px) {
     .form-container {
         width: 90%;
+    }
+
+    .update-btn.submit {
+        width: 60%;
     }
 }
