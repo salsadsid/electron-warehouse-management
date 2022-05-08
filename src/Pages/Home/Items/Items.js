@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Item from '../Item/Item';
 import './Items.css'
 const Items = () => {
@@ -20,6 +21,7 @@ const Items = () => {
                     ></Item>)
                 }
             </div>
+            <h1 className='text-center'><Link className='update-btn' to='/manage'>Manage Inventories</Link></h1>
         </div>
     );
 };

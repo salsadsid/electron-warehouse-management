@@ -25,7 +25,9 @@ const Item = ({ item }) => {
                         {description}
                     </p>
                 </div>
-                <Button onClick={() => navigateToInventoryDetail(_id)} className="update-btn">Update</Button>
+                <h2 className='text-center'>
+                    <Button onClick={() => navigateToInventoryDetail(_id)} className="update-btn">Update</Button>
+                </h2>
             </div>
         </div>
     );
