@@ -18,14 +18,12 @@ function verifyJWT(req, res, next) {
         return res.status(401).send({ message: 'unauthorized access' })
     }
     const token = authHeader.split(' ')[1];
-    console.log('pofsdf', process.env.ACCESS_TOKEN_SECRET)
-    console.log('token', token);
+
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
-        console.log(err)
+
         if (err) {
             return res.status(403).send({ message: 'Forbidden access' })
         }
-        console.log('decoded', decoded);
         req.decoded = decoded;
         next();
     })
@@ -85,7 +83,6 @@ async function run() {
         })
         app.post('/item', async (req, res) => {
             const newItem = req.body;
-            console.log(newItem)
             const result = await inventoryCollection.insertOne(newItem);
             res.send(result)
         })
