@@ -32,7 +32,7 @@ const Login = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         await signInWithEmailAndPassword(email, password)
-        const { data } = await axios.post('https://electron-warehouse-management-server.vercel.app/login', { email });
+        const { data } = await axios.post('https://electron.onrender.com/login', { email });
         localStorage.setItem('accessToken', data.accessToken);
         navigate(from, { replace: true });
         event.target.reset();

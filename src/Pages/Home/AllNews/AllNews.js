@@ -5,7 +5,7 @@ const AllNews = () => {
     const [news, setNews] = useState([])
 
     useEffect(() => {
-        fetch('https://electron-warehouse-management-server.vercel.app/news')
+        fetch('https://electron.onrender.com/news')
             .then(res => res.json())
             .then(data => setNews(data))
     }, [])

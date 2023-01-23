@@ -8,7 +8,7 @@ const InventoryDetail = () => {
     const [quantity, setQuantity] = useState(0);
 
     useEffect(() => {
-        const url = `https://electron-warehouse-management-server.vercel.app/item/${id}`
+        const url = `https://electron.onrender.com/item/${id}`
         console.log(url);
         fetch(url)
             .then(res => res.json())
@@ -20,7 +20,7 @@ const InventoryDetail = () => {
             quantity: item.quantity - 1,
         }
 
-        fetch(`https://electron-warehouse-management-server.vercel.app/item/`, {
+        fetch(`https://electron.onrender.com/item/`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +43,7 @@ const InventoryDetail = () => {
             quantity: newQuantity,
         }
 
-        fetch(`https://electron-warehouse-management-server.vercel.app/item/`, {
+        fetch(`https://electron.onrender.com/item/`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

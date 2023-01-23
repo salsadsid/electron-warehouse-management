@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
+import Loading from '../../Login/Loading/Loading';
 import Item from '../Item/Item';
 import './Items.css'
 const Items = () => {
-    const [items, setItems] = useState([])
-
-    useEffect(() => {
-        fetch("https://electron-warehouse-management-server.vercel.app/item")
-            .then(res => res.json())
-            .then(data => setItems(data))
-    }, [])
+    const { data: items, isLoading } = useQuery('parts', () => fetch(`https://electron.onrender.com/item`).then(res => res.json())
+    )
+    if (isLoading) {
+        return <Loading></Loading>
+    }
     return (
         <div className='container my-4'>
             <h1 className='text-center my-4'>Inventory</h1>

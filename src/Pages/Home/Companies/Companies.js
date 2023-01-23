@@ -4,7 +4,7 @@ const Companies = () => {
     const [logos, setLogos] = useState([])
 
     useEffect(() => {
-        fetch('https://electron-warehouse-management-server.vercel.app/logo')
+        fetch('https://electron.onrender.com/logo')
             .then(res => res.json())
             .then(data => setLogos(data))
     }, [])

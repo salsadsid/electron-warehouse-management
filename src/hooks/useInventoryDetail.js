@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const useInventoryDetail = (itemId) => {
     const [item, setItem] = useState({});
     useEffect(() => {
-        const url = `https://electron-warehouse-management-server.vercel.app/item/${itemId}`
+        const url = `https://electron.onrender.com/item/${itemId}`
         console.log(url);
         fetch(url)
             .then(res => res.json())

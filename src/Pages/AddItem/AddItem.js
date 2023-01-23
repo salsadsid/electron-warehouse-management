@@ -9,7 +9,7 @@ const AddItem = () => {
     const onSubmit = data => {
         // console.log(data);
 
-        fetch('https://electron-warehouse-management-server.vercel.app/item', {
+        fetch('https://electron.onrender.com/item', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
