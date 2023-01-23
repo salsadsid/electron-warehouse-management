@@ -9,7 +9,7 @@ const AddItem = () => {
     const onSubmit = data => {
         // console.log(data);
 
-        fetch('https://protected-river-63833.herokuapp.com/item', {
+        fetch('https://electron-warehouse-management-server.vercel.app/item', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -9,7 +9,7 @@ const MyItem = () => {
     useEffect(() => {
         const getItem = async () => {
             const email = user.email;
-            const url = `https://protected-river-63833.herokuapp.com/myitem?email=${email}`;
+            const url = `https://electron-warehouse-management-server.vercel.app/myitem?email=${email}`;
             console.log(url)
             const { data } = await axios.get(url, {
                 headers: {
@@ -23,7 +23,7 @@ const MyItem = () => {
     }, [user])
 
     const handleDelete = id => {
-        const url = `https://protected-river-63833.herokuapp.com/item/${id}`;
+        const url = `https://electron-warehouse-management-server.vercel.app/item/${id}`;
 
         fetch(url, {
             method: 'DELETE'

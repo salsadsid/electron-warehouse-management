@@ -6,7 +6,7 @@ const Items = () => {
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        fetch("https://protected-river-63833.herokuapp.com/item")
+        fetch("https://electron-warehouse-management-server.vercel.app/item")
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])

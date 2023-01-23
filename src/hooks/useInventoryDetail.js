@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const useInventoryDetail = (itemId) => {
     const [item, setItem] = useState({});
     useEffect(() => {
-        const url = `https://protected-river-63833.herokuapp.com/item/${itemId}`
+        const url = `https://electron-warehouse-management-server.vercel.app/item/${itemId}`
         console.log(url);
         fetch(url)
             .then(res => res.json())

@@ -5,7 +5,7 @@ const AllNews = () => {
     const [news, setNews] = useState([])
 
     useEffect(() => {
-        fetch('https://protected-river-63833.herokuapp.com/news')
+        fetch('https://electron-warehouse-management-server.vercel.app/news')
             .then(res => res.json())
             .then(data => setNews(data))
     }, [])

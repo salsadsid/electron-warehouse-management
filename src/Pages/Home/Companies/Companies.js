@@ -4,7 +4,7 @@ const Companies = () => {
     const [logos, setLogos] = useState([])
 
     useEffect(() => {
-        fetch('https://protected-river-63833.herokuapp.com/logo')
+        fetch('https://electron-warehouse-management-server.vercel.app/logo')
             .then(res => res.json())
             .then(data => setLogos(data))
     }, [])

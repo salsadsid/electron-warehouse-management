@@ -8,7 +8,7 @@ const InventoryDetail = () => {
     const [quantity, setQuantity] = useState(0);
 
     useEffect(() => {
-        const url = `https://protected-river-63833.herokuapp.com/item/${id}`
+        const url = `https://electron-warehouse-management-server.vercel.app/item/${id}`
         console.log(url);
         fetch(url)
             .then(res => res.json())
@@ -20,7 +20,7 @@ const InventoryDetail = () => {
             quantity: item.quantity - 1,
         }
 
-        fetch(`https://protected-river-63833.herokuapp.com/item/`, {
+        fetch(`https://electron-warehouse-management-server.vercel.app/item/`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +43,7 @@ const InventoryDetail = () => {
             quantity: newQuantity,
         }
 
-        fetch(`https://protected-river-63833.herokuapp.com/item/`, {
+        fetch(`https://electron-warehouse-management-server.vercel.app/item/`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

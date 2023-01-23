@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Manage = () => {
     const [items, setItems] = useState([])
     const handleDelete = id => {
-        const url = `https://protected-river-63833.herokuapp.com/item/${id}`;
+        const url = `https://electron-warehouse-management-server.vercel.app/item/${id}`;
 
         fetch(url, {
             method: 'DELETE'
@@ -19,7 +19,7 @@ const Manage = () => {
             })
     }
     useEffect(() => {
-        fetch("https://protected-river-63833.herokuapp.com/item")
+        fetch("https://electron-warehouse-management-server.vercel.app/item")
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
