@@ -1,39 +1,69 @@
 import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
+import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import Loading from '../Login/Loading/Loading';
+import ProductRow from './ProductRow/ProductRow';
 
 const Manage = () => {
-    const [items, setItems] = useState([])
+    const { data: items, isLoading ,refetch} = useQuery('items', () => fetch(`https://electron.onrender.com/item`).then(res => res.json(),{retry: 5})
+    )
+    if (isLoading) {
+        return <Loading></Loading>
+    }
     const handleDelete = id => {
+
+        const confirm = window.confirm("Are you sure")
         const url = `https://electron.onrender.com/item/${id}`;
 
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                const proceed = window.confirm('Are you Sure ?')
-                if (proceed) {
-                    const remaining = items.filter(item => item._id !== id);
-                    setItems(remaining);
-                }
+        if(confirm){
+            fetch(url, {
+                method: 'DELETE'
             })
+                .then(res => res.json())
+                .then(data => {             
+                    if(data.deletedCount){
+                        toast.success("Successfully Deleted",{
+                            theme: "colored"
+                        })
+                    }else{
+                        toast.error("Not Deleted",{
+                            theme: "colored"
+                        })
+                    }
+                    refetch();
+                })
+        }else{
+            return;
+        }
     }
-    useEffect(() => {
-        fetch("https://electron.onrender.com/item")
-            .then(res => res.json())
-            .then(data => setItems(data))
-    }, [])
+  
     return (
         <div className='container'>
             <h1 className="text-center my-3">Manage Inventories</h1>
-            <div>
-                {
-                    items.map(item => <div className='table-item' key={item._id}>
-                        <p><span>Name: {item.name} | Supplier: {item.supplier} <button className='btn btn-danger' onClick={() => { handleDelete(item._id) }}>Delete This Item</button></span></p>
-                    </div>)
-                }
-            </div>
+            <Table  striped="columns">
+      <thead>
+        <tr>
+          <th>#</th>
+         <th>Product Name</th>
+         <th>Supplier</th>
+         <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+            {
+                items.map((item,index)=><ProductRow
+                key={item._id}
+                item={item}
+                index={index}
+                handleDelete={handleDelete}
+                ></ProductRow>)
+            }
+      </tbody>
+    </Table>
             <h1 className='text-center'><Link className='update-btn' to='/add'>Add new item</Link></h1>
+            
         </div>
     );
 };

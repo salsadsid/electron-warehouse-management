@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import './AddItem.css'
 const AddItem = () => {
@@ -18,7 +19,15 @@ const AddItem = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
+                if(result.insertedId){
+                    toast.success("Item Added",{
+                        theme: "colored"
+                    })
+                }else{
+                    toast.error("Item Not Added",{
+                        theme: "colored"
+                    })
+                }
             })
     }
     return (

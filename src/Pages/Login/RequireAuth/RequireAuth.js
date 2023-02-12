@@ -15,14 +15,14 @@ const RequireAuth = ({ children }) => {
         return <Navigate to='/login' state={{ from: location }} replace></Navigate>
     }
     // console.log(user)
-    if (user.providerData[0]?.providerId === 'password' && !user.emailVerified) {
-        return <div className='text-center'>
-            <h2 className='text-center text-center'>Your email is not verified</h2>
-            <button onClick={async () => {
-                sendPasswordResetEmail();
-            }} className="btn-primary">Send Email Verification</button>
-        </div>
-    }
+    // if (user.providerData[0]?.providerId === 'password' && !user.emailVerified) {
+    //     return <div className='text-center'>
+    //         <h2 className='text-center text-center'>Your email is not verified</h2>
+    //         <button onClick={async () => {
+    //             sendPasswordResetEmail();
+    //         }} className="btn-primary">Send Email Verification</button>
+    //     </div>
+    // }
     return children
 };
 

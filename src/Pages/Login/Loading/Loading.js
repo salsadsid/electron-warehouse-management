@@ -1,11 +1,14 @@
 import React from 'react';
-
+import img from '../../../images/Comp-2.gif'
 const Loading = () => {
+    const style = {
+        background: `radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%)`,
+      };
+    
     return (
-        <div style={{ height: "300px" }} className='d-flex justify-content-center align-items-center mt-5 '>
-            <div className="spinner-border text-primary" role="status">
-                <span className="visually-hidden">Loading...</span>
-            </div>
+        <div className='d-flex justify-content-center align-items-center mt-5 w-100 h-100 position-relative'>
+                <div style={style}className="h-100 w-100 position-absolute top-0"></div>
+                <img src={img} alt="" srcset="" />
         </div>
     );
 };

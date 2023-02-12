@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 import Loading from '../../Login/Loading/Loading';
 import Item from '../Item/Item';
 import './Items.css'
 const Items = () => {
-    const { data: items, isLoading } = useQuery('parts', () => fetch(`https://electron.onrender.com/item`).then(res => res.json())
+    const { data: items, isLoading } = useQuery('items', () => fetch(`https://electron.onrender.com/item`).then(res => res.json(),{retry: 5})
     )
     if (isLoading) {
         return <Loading></Loading>
