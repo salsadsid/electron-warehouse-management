@@ -62,7 +62,7 @@ const Manage = () => {
             }
       </tbody>
     </Table>
-            <h1 className='text-center'><Link className='update-btn' to='/add'>Add new item</Link></h1>
+            <h1 className='text-center'><Link className='btn btn-primary' to='/add'>Add Item</Link></h1>
             
         </div>
     );

@@ -71,7 +71,7 @@ const InventoryDetail = () => {
                 <p>
                     {item.description}
                 </p>
-                <button onClick={() => handleDeliver(id)} className='update-btn'>Delivered</button>
+                <button onClick={() => handleDeliver(id)} className='btn btn-primary'>Delivered</button>
             </div>
 
             <div className="login">
@@ -84,7 +84,7 @@ const InventoryDetail = () => {
 
                 </div>
             </div>
-            <h1 className='text-center'><Link className='update-btn' to='/manage'>Manage Inventories</Link></h1>
+            <h1 className='text-center'><Link className='btn btn-primary' to='/manage'>Manage Inventories</Link></h1>
         </div>
 
     );

@@ -6,7 +6,7 @@ const ProductRow = ({item,index,handleDelete}) => {
             <td>{index+1}</td>
             <td>{item.name}</td>
             <td>{item.supplier}</td>
-            <td><button className='btn btn-danger' onClick={() => { handleDelete(item._id) }}>Delete This Item</button></td>
+            <td><button className='btn btn-danger' onClick={() => { handleDelete(item._id) }}>Delete</button></td>
         </tr>
     );
 };

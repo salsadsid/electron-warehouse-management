@@ -1,11 +1,11 @@
-.news-container {
+/* .news-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
-@media only screen and (max-width:576px) {
+@media only screen and (max-width:720px) {
     .news-container {
         grid-template-columns: repeat(1, 1fr);
     }
-}
+} */

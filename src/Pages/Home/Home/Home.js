@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Shared/Footer/Footer';
 import AllNews from '../AllNews/AllNews';
 import Banner from '../Banner/Banner';
 import Companies from '../Companies/Companies';
@@ -12,6 +13,7 @@ const Home = () => {
             <Items></Items>
             <AllNews></AllNews>
             <Companies></Companies>
+            <Footer></Footer>
         </div>
     );
 };

@@ -11,7 +11,7 @@ const Footer = () => {
             <p className='text-center text-white'><Link className='text-white text-decoration-none' to='/login'>Login</Link></p>
             <p className='text-center text-white'><Link className='text-white text-decoration-none' to='/blogs'>blogs</Link></p>
 
-            <p className='text-center text-white py-3'>Copyright &copy; {year} salsadsid</p>
+            <p className='text-center text-white m-0'>Copyright &copy; {year} salsadsid</p>
         </div>
     );
 };
