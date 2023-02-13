@@ -45,7 +45,7 @@ const Login = () => {
             toast("Sent Mail");
         }
         else {
-            toast("Please provide an email!");
+            toast.error("Please provide an email!");
         }
     }
     return (
@@ -53,7 +53,7 @@ const Login = () => {
             <div className="login">
                 <div className="form">
                     <form className="login-form" onSubmit={handleSubmit}>
-                        <span className="material-icons">Login</span>
+                        <h1 style={{ fontFamily: "'Gugi', monospace" }} className='text-center my-4'>Login</h1>
                         <input name='email' ref={emailRef} type="email" placeholder="email" required />
                         <input name='password' type="password" placeholder="password" required />
                         <button type='submit'>Login</button>
@@ -65,7 +65,7 @@ const Login = () => {
                     </form>
                     <ToastContainer></ToastContainer>
                     <SocialLogin></SocialLogin>
-                    <p className='mt-2'>New in here ?<Link to='/register'>Register</Link></p>
+                    <p className='mt-2'>New in Electron ? <Link to='/register'>Register</Link></p>
                 </div>
             </div >
         </div>

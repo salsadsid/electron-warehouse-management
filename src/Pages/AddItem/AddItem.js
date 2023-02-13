@@ -32,18 +32,17 @@ const AddItem = () => {
     }
     return (
         <div className='form-container mx-auto'>
-            <h2 className='text-center my-3'>Add new item</h2>
+            <h2 className='text-center my-4' style={{ fontFamily: "'Gugi', monospace" }}>Add new item</h2>
             <form className='d-flex flex-column my-3' onSubmit={handleSubmit(onSubmit)}>
 
-                <input className='mb-2' placeholder='Name' {...register("name", { required: true })} />
-                <input className='mb-2' placeholder='Photo URL' {...register("img", { required: true })} />
-                <input className='mb-2' placeholder='Price' {...register("price", { required: true })} />
-                <input className='mb-2' placeholder='Quantity' {...register("quantity", { required: true })} />
-                <input className='mb-2' placeholder='Supplier' {...register("supplier", { required: true })} />
-                <input className='mb-2' placeholder='Sold' {...register("sold", { required: true })} />
-                <textarea className='mb-2' placeholder='Description' {...register("description", { required: true })} />
-                <input className='mb-2' placeholder='Email' {...register("email", { required: true })} value={user?.email} readOnly />
-                <input className='update-btn submit mx-auto' type="submit" />
+                <input className='mb-2 form-control' placeholder='Photo URL' {...register("img", { required: true })} />
+                <input className='mb-2 form-control' type="number" placeholder='Price' {...register("price", { required: true })} />
+                <input className='mb-2 form-control' type="number" placeholder='Quantity' {...register("quantity", { required: true })} />
+                <input className='mb-2 form-control' placeholder='Supplier' {...register("supplier", { required: true })} />
+                <input className='mb-2 form-control' type="number" placeholder='Sold' {...register("sold", { required: true })} />
+                <textarea className='mb-2 form-control' placeholder='Description' {...register("description", { required: true })} />
+                <input className='mb-2 form-control' placeholder='Email' {...register("email", { required: true })} value={user?.email} readOnly />
+                <input className='btn w-25 mx-auto btn-success' type="submit" />
             </form>
         </div>
     );

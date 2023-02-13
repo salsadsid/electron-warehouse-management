@@ -31,8 +31,8 @@ const SocialLogin = () => {
             </div>
             {errorMessage}
             <button id='google-btn' onClick={() => signInWithGoogle()}>
-                <img src={googleicon} alt="" className='mt-2' />
-                <p className='fw-bold'>Google</p>
+                <img src={googleicon} alt="" className='my-2 ' />
+                <p className='fw-bold mb-0'>Continue with Google</p>
             </button>
         </div >
     );

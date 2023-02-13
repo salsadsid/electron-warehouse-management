@@ -6,7 +6,7 @@ import Loading from '../Loading/Loading';
 
 const RequireAuth = ({ children }) => {
     const [user, loading] = useAuthState(auth);
-    const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth);
+    // const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth);
     const location = useLocation();
     if (loading) {
         return <Loading></Loading>

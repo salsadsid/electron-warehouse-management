@@ -10,8 +10,8 @@ const Companies = () => {
     }, [])
     return (
         <div className='container my-4'>
-            <h1 className='text-center my-4'>Trusted By</h1>
-            <div className="logo-container">
+            <h1 className='text-center my-4' style={{ fontFamily: "'Gugi', monospace" }}>Trusted By</h1>
+            <div className="logo-container d-flex flex-wrap justify-content-center align-items-center">
                 {
                     logos.map(logo => <div
                         key={logo._id} className='mx-auto'

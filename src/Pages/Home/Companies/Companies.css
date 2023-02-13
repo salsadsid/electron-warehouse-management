@@ -1,8 +1,8 @@
-.logo-container {
+/* .logo-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-}
+} */
 
 .logo-container img {
     height: 100px;

@@ -71,20 +71,21 @@ const InventoryDetail = () => {
                 <p>
                     {item.description}
                 </p>
-                <button onClick={() => handleDeliver(id)} className='btn btn-primary'>Delivered</button>
+                <button onClick={() => handleDeliver(id)} className='btn btn-primary'>Delivered<i class="ms-2 fas fa-arrow-right"></i></button>
             </div>
 
-            <div className="login">
+            <div>
+            <div className="login mt-0">
                 <div className="form">
                     <form className="login-form" onSubmit={handleSubmit}>
-                        <p className="fs-1">Restock</p>
+                        <p className="fs-3">Restock <i class=" ms-2 fas fa-layer-group"></i></p>
                         <input name='number' type="number" placeholder="Enter a number" required />
-                        <button type='submit'>Restock</button>
+                        <button type='submit'>Restock <i class="ms-2 fas fa-arrow-right"></i></button>
                     </form>
-
                 </div>
             </div>
-            <h1 className='text-center'><Link className='btn btn-primary' to='/manage'>Manage Inventories</Link></h1>
+            <h1 className='text-center m-0'><Link className='btn btn-success' to='/manage'>Manage Inventories <i class="ms-2 fas fa-arrow-right"></i></Link></h1>
+            </div>
         </div>
 
     );

@@ -12,7 +12,7 @@ const AllNews = () => {
     }
     return (
         <div className='container my-4'>
-            <h1 className='text-center my-4'>Top News</h1>
+            <h1 className='text-center my-4'style={{ fontFamily: "'Gugi', monospace" }}>Top News</h1>
             <div className="row g-2 g-lg-2">
                 {
                     news.articles.map(singlenews => <News

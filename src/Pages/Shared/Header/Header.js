@@ -14,7 +14,7 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="success" variant="dark" >
                 <Container>
-                    <Navbar.Brand as={Link} to='/'>Electron</Navbar.Brand>
+                    <Navbar.Brand as={Link} to='/'style={{ fontFamily: "'Gugi', monospace" }}>Electron</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -33,7 +33,7 @@ const Header = () => {
                                         Add Items
                                     </Nav.Link>
                                     <Nav.Link as={Link} to="myitem">
-                                        My Item
+                                        My Items
                                     </Nav.Link>
                                     <Nav.Link as={Link} to="home" onClick={handleSignout}>Log out</Nav.Link>
                                 </Nav>

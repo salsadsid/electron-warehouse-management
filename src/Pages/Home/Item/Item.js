@@ -10,7 +10,7 @@ const Item = ({ item }) => {
     }
     return (
         <div className='card'>
-            <img src={img} className="card-img-top img-fluid"style={{maxHeight: "250px",objectFit:"cover"}} alt="..." />
+            <img src={img} className="card-img-top img-fluid" style={{maxHeight: "250px",objectFit:"cover"}} alt="..." />
 
             <div className="card-body">
                 <div className="title">

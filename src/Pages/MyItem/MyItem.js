@@ -52,7 +52,7 @@ const MyItem = () => {
     }
     return (
         <div className='container'>
-            <h2 className='text-center'>My Item/s</h2>
+            <h2 className='text-center my-4' style={{ fontFamily: "'Gugi', monospace" }}>My Item</h2>
             <div>
             <Table  striped="columns">
       <thead>

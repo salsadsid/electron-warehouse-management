@@ -1,5 +1,5 @@
 .login {
-    width: 360px;
+    max-width: 500px;
     padding: 4% 0 0;
     margin: auto;
 }
@@ -9,8 +9,8 @@
     z-index: 1;
     background: linear-gradient(90deg, #4b6bb74c 0%, #18284845 100%);
     border-radius: 10px;
-    max-width: 360px;
-    margin: 0 auto 100px;
+    max-width: 97%;
+    margin: 0 auto 10px;
     padding: 45px;
     text-align: center;
 }
@@ -52,7 +52,10 @@
     background: #395591;
 }
 
-.form span {
-    font-size: 75px;
+.form h1 {
+    /* font-size: 75px; */
     color: #4b6cb7;
+}
+@media only screen and (max-width:576px) {
+    
 }

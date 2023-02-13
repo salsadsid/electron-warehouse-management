@@ -25,14 +25,14 @@ const Register = () => {
         <div className="login">
             <div className="form">
                 <form className="login-form" onSubmit={handleSubmit}>
-                    <span className="material-icons">Register</span>
+                    <h1 style={{ fontFamily: "'Gugi', monospace" }} className='text-center my-4'>Register</h1>
                     <input name='name' type="text" placeholder="name" required />
                     <input name='email' type="email" placeholder="email" required />
                     <input name='password' type="password" placeholder="password" required />
                     <button type='submit'>Register</button>
                 </form>
                 <SocialLogin></SocialLogin>
-                <p className='mt-2'>Already an account <Link to='/login'>Login</Link></p>
+                <p className='mt-2'>Already an account !! <Link to='/login'>Login</Link></p>
             </div>
         </div>
     );

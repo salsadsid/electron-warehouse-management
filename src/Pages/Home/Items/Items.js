@@ -12,7 +12,7 @@ const Items = () => {
     }
     return (
         <div className='container my-4'>
-            <h1 className='text-center my-4'>Inventory</h1>
+            <h1 style={{ fontFamily: "'Gugi', monospace" }} className='text-center my-4'>Inventory</h1>
             <div className="items-container">
                 {
                     items.slice(0, 6).map(item => <Item
@@ -21,7 +21,7 @@ const Items = () => {
                     ></Item>)
                 }
             </div>
-            <h1 className='text-center'><Link className='btn btn-primary' to='/manage'>Manage Inventories</Link></h1>
+            <h1 className='text-end my-4'><Link className='btn btn-success' to='/manage'>Manage Inventories <i class="ms-2 fas fa-arrow-right"></i></Link></h1>
         </div>
     );
 };
