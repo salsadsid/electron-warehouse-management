@@ -5,9 +5,10 @@ import News from '../News/News';
 // import './AllNews.css'
 const AllNews = () => {
     
-    const { data: news, isLoading } = useQuery('news', () => fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=deef0aff2e6e45ecae6754841a394650`).then(res => res.json(),{retry: 5})
+    const { data: news, isLoading } = useQuery('news', () => fetch(`https://electron.onrender.com/news`).then(res => res.json(),{retry: 5})
     )
-    if (isLoading) {
+    console.log(news)
+    if (isLoading || !news[0]?.articles?.length) {
         return <Loading></Loading>
     }
     return (
@@ -15,7 +16,7 @@ const AllNews = () => {
             <h1 className='text-center my-4'style={{ fontFamily: "'Gugi', monospace" }}>Top News</h1>
             <div className="row g-2 g-lg-2">
                 {
-                    news.articles.map(singlenews => <News
+                    news[0]?.articles?.map(singlenews => <News
                         
                         singlenews={singlenews}
                     ></News>)
