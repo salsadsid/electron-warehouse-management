@@ -63,7 +63,7 @@ const InventoryDetail = () => {
             <div className='detail mx-auto'>
                 <h2 >Detailed Information</h2>
                 <h4>Name: <span className='title'>{item.name}</span></h4>
-                <img src={item.img} alt="" />
+                <img className='w-100' style={{objectFit:"cover"}} src={item.img} alt="" />
                 <p className='mt-3'><span className='head'>Price:</span> {item.price}</p>
                 <p><span className='head'>Quantity:</span> {quantity == 0 ? item.quantity : quantity} </p>
                 <p><span className='head'>Sold:</span> {item.sold}</p>
